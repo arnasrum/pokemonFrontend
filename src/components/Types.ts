@@ -1,11 +1,24 @@
 export interface PokemonData {
+    name: string,
+    pokedexID: number,
+    type: PokemonType,
     sprites: Sprites,
-    types: object,
+    stats: Stats
 }
 
-export interface ApiTypes {
-    slot: number,
-    type: Type,
+interface Stats {
+    attack: number,
+    specialAttack: number,
+    defense: number,
+    specialDefense: number,
+    hp: number,
+    speed: number
+
+}
+
+export interface PokemonType {
+    type1: string,
+    type2: string,
 }
 
 export interface PokemonTypes {
@@ -18,8 +31,10 @@ interface Type {
 }
 
 interface Sprites {
-    back_default: string,
-    front_default: string,
-    front_shiny: string,
-    back_shiny: string,
+    defaultFront: string,
+    defaultBack: string
+}
+
+export interface PokemonObject {
+    [key: number]: PokemonData
 }
