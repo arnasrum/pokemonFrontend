@@ -9,7 +9,7 @@ import PokemonStatsDisplay from './components/PokemonStatsDisplay';
 
 function App() {
 
-    const [query, setQuery] = useState<String>();
+    const [query, setQuery] = useState<string>();
     const [pokemonData, setPokemonData] = useState<PokemonData>();
     const [pokemonCounters, setPokemonCounters] = useState<PokemonObject>();
 
@@ -50,7 +50,7 @@ function App() {
                 <img src={pokemonData.sprites.defaultBack} />
             </div>
             <div>
-                {Object.values(pokemonData.type).map((type: string, index: number) => {
+                {Object.values(pokemonData.typeName).map((type: string) => {
                     if(type) {
                         return (<img className={type} 
                             key={crypto.randomUUID()} 
@@ -63,7 +63,7 @@ function App() {
 
                 <PokemonStatsDisplay pokemonData={pokemonData} /> 
                 <PokemonForm setQuery={setQuery}/>
-                {Object.values(pokemonCounters).map((pokemon: PokemonData, index: number) => {
+                {Object.values(pokemonCounters).map((pokemon: PokemonData) => {
                     return(
                         <PokemonDisplay pokemonData={pokemon}/> 
                     );

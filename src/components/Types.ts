@@ -1,7 +1,7 @@
 export interface PokemonData {
     name: string,
     pokedexID: number,
-    type: PokemonType,
+    typeName: PokemonType,
     sprites: Sprites,
     stats: Stats
 }

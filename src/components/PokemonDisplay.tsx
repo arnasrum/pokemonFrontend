@@ -7,21 +7,21 @@ function PokemonDisplay(props) {
     const pokemon: PokemonData = props.pokemonData
 
     if(pokemon) {
-        if(pokemon.type.type2) {
+        if(pokemon.typeName.type2) {
             return(
             <>
                 <p>{pokemon.name}</p>
                 <img src={pokemon.sprites.defaultFront} />
                 <div>
-                    <img className={pokemon.type.type1} 
+                    <img className={pokemon.typeName.type1}
                         key={crypto.randomUUID()} 
-                        src={Types[pokemon.type.type1]} 
+                        src={Types[pokemon.typeName.type1]}
                         width={20} 
                         height={20}
                     />
-                    <img className={pokemon.type.type2} 
+                    <img className={pokemon.typeName.type2}
                         key={crypto.randomUUID()} 
-                        src={Types[pokemon.type.type2]} 
+                        src={Types[pokemon.typeName.type2]}
                         width={20} 
                         height={20}
                     />
@@ -34,9 +34,9 @@ function PokemonDisplay(props) {
                 <p>{pokemon.name}</p>
                 <img src={pokemon.sprites.defaultFront} />
                 <div>
-                    <img className={pokemon.type.type1} 
+                    <img className={pokemon.typeName.type1}
                         key={crypto.randomUUID()} 
-                        src={Types[pokemon.type.type1]} 
+                        src={Types[pokemon.typeName.type1]}
                         width={20} 
                         height={20}
                     />
