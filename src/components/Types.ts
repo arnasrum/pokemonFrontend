@@ -25,11 +25,6 @@ export interface PokemonTypes {
     [key: string]: string 
 }
 
-interface Type {
-    name: string,
-    url: string,
-}
-
 interface Sprites {
     defaultFront: string,
     defaultBack: string

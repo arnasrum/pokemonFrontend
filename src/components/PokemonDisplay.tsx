@@ -2,7 +2,7 @@ import PokemonStatsDisplay from "./PokemonStatsDisplay";
 import { PokemonData } from "./Types";
 import { Types } from './PokemonTypes'
 
-function PokemonDisplay(props) {
+function PokemonDisplay(props: { pokemonData: PokemonData; }) {
 
     const pokemon: PokemonData = props.pokemonData
 
